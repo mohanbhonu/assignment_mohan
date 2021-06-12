@@ -17,7 +17,12 @@ function find_max_row(matrix){
             stat_hash[i] = count;
         }
     }
-    return stat_hash;
+    Object.entries(stat_hash).map((row) => {
+       if(max_count === row[1]){
+           max_row = row[0];
+       }
+    });
+    return max_row;
 }
 
 let matrix = [
